@@ -1,6 +1,6 @@
 function Column(id, name) {
 	var self = this;
-	
+
 	this.id = id;
 	this.name = name || 'Brak nazwy';
 	this.element = createColumn();
@@ -12,12 +12,12 @@ function Column(id, name) {
 		var columnCardList = $('<ul class="card-list"></ul>');
 		var columnDelete = $('<button class="btn-delete">x</button>');
 		var columnAddCard = $('<button class="column-add-card">Dodaj kartę</button>');
-		
+
 		// PODPINANIE ODPOWIEDNICH ZDARZEŃ POD WĘZŁY
 		columnDelete.click(function() {
 			self.deleteColumn();
 		});
-		
+
 		columnAddCard.click(function(event) {
 			var cardName = prompt("Podaj nazwę karty");
 			event.preventDefault();
@@ -34,7 +34,7 @@ function Column(id, name) {
 				}
 			});
 		});
-			
+
 			// KONSTRUOWANIE ELEMENTU KOLUMNY
 		column.append(columnTitle)
 			.append(columnDelete)
